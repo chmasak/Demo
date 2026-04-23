@@ -1,81 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Greeting Page</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #667eea, #764ba2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: white;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        }
-
-        input {
-            padding: 10px;
-            border: none;
-            border-radius: 8px;
-            margin-top: 10px;
-            width: 200px;
-        }
-
-        button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            background: #ffffff;
-            color: #333;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        button:hover {
-            background: #ddd;
-        }
-
-        #message {
-            margin-top: 15px;
-            font-size: 18px;
-        }
-    </style>
+    <title>Hello User</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="card">
-        <h1>Welcome 👋</h1>
+    <div class="box">
+        <h1>Hello 👋</h1>
         <p>Enter your name:</p>
-        
+
         <input type="text" id="name" placeholder="Your name">
         <br>
+
         <button onclick="greet()">Greet Me</button>
 
-        <div id="message"></div>
+        <p id="message"></p>
     </div>
 
-    <script>
-        function greet() {
-            let name = document.getElementById("name").value;
-            let message = document.getElementById("message");
-
-            if (name === "") {
-                message.innerText = "Please enter your name!";
-            } else {
-                message.innerText = "Hello, " + name + "! Nice to meet you 😊";
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
